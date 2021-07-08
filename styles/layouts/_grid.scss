@@ -1,0 +1,258 @@
+.header {
+  //header
+  @include bg-image(false, "image-header.jpg");
+  .navbar {
+    //nav
+    // background-color: #222;
+    height: calc(10vh - 1.2rem);
+    @include flexer(row, flex-start, center);
+    .logo {
+      //image
+    }
+    .listbar {
+      //ul
+      list-style-type: none;
+      flex: 1;
+      // background: #000;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .contact {
+        a {
+          color: $dark-blue;
+          font-weight: 900;
+        }
+        background-color: $white;
+        padding: 0.75rem 1.3rem;
+        @include prefixer(border-radius, 25.99px, webkit moz ms o);
+      }
+      li {
+        padding: 0 1.5rem;
+
+        a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .hero {
+    //div
+    // background-color: #fe2;
+    height: calc(90vh - 1.2rem);
+
+    .hero__title {
+      padding-top: 7rem;
+      color: $white;
+    }
+    .tobottom_arrow {
+      padding-top: 8.5rem;
+      display: flex;
+      justify-content: center;
+      .tailarrow {
+        display: block;
+        height: 8rem;
+        width: 0.3rem;
+        background-color: $white;
+        position: relative;
+        i {
+          font-size: 4rem;
+          color: $white;
+          position: absolute;
+          bottom: -1.5rem;
+          right: -50%;
+          @include prefixer(transform, translateX(38%), webkit moz ms o);
+        }
+      }
+    }
+  }
+}
+
+/*----End Header----*/
+
+/*----Start Skills Section----*/
+.skills {
+  // background-color: #000;
+  .wrapper {
+    @include grider(2, 40rem, 0, 0);
+
+    .boxshow {
+      position: relative;
+      .bottom-transform {
+        @include flexer(column, center, center);
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        @include prefixer(transform, translateX(-50%), webkit moz ms o);
+        h3 {
+          font-size: 2.8rem;
+          font-family: $font-family-frances;
+          font-weight: 900;
+        }
+        p {
+          font-family: $font-family-barlow;
+
+          margin: 1.5rem 0;
+          color: $dark-blue;
+          line-height: 1.5rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .transform {
+      @include flexer(column, center, center);
+
+      width: 60%;
+      margin: 0 auto;
+      h3 {
+        font-size: 3.25rem;
+        font-family: $font-family-frances;
+        font-weight: 900;
+        color: $very-dark-desaturated-blue;
+        text-align: left;
+        width: 100%;
+      }
+      p {
+        font-family: $font-family-barlow;
+        color: $very-dark-desaturated-blue;
+        margin: 2rem 0;
+        color: $dark-blue;
+        line-height: 1.5rem;
+      }
+      .learnmore_container {
+        width: 100%;
+        a.yellow {
+          @include learnmore-href($yellow);
+        }
+        a.blue {
+          @include learnmore-href($grayish-blue);
+        }
+      }
+    }
+    .bg-eggs {
+      @include bg-image(false, "image-transform.jpg");
+    }
+    .bg-cup {
+      @include bg-image(false, "image-stand-out.jpg");
+    }
+    .bg-cherris {
+      @include bg-image(false, "image-graphic-design.jpg");
+      .bottom-transform {
+        //overide colors
+        h3,
+        p {
+          color: $very-dark-desaturated-blue;
+        }
+      }
+    }
+    .bg-orange {
+      @include bg-image(false, "image-photography.jpg");
+      .bottom-transform {
+        //overide colors
+        h3,
+        p {
+          color: $dark-blue;
+        }
+      }
+    }
+  }
+}
+
+/*----End Skills Section ----*/
+
+/*----Start Skills Section 🙋----*/
+
+.testimonials__container {
+  padding: 200px 100px;
+  .testimonials__title {
+    font-size: 2.5rem;
+    color: $dark-moderate-cyan;
+  }
+
+  .cards_container {
+    @include grider(3, 0, 0, 1rem);
+    .testimonials__card {
+      @include flexer(column, center, center);
+
+      .card__img {
+        width: 95px;
+        @include prefixer(border-radius, 100%, webkit moz ms o);
+        margin: 50px auto;
+      }
+
+      .card__paragraph {
+        width: 65%;
+        text-align: center;
+      }
+
+      .card__person {
+        margin-top: 50px;
+        text-align: center;
+        .person__name {
+          font-weight: bold;
+          margin-bottom: 0.6rem;
+        }
+        .person__title {
+          color: $very-dark-grayish-blue;
+          font-weight: normal;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+/*----End Skills Section 🙋----*/
+/*----Start Gallery Section 😎----*/
+
+.gallery {
+  &__container {
+    @include grider(4, 0, 0, 0);
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/*----End Gallery Section 😎----*/
+/*----Start Footer 🙋----*/
+
+.footer {
+  background-color: $monte-carlo;
+  color: $paradiso;
+  &__container {
+    padding: 5rem;
+    h2 {
+      text-transform: lowercase;
+      font-size: 3rem;
+    }
+    .list {
+      width: 25%;
+      list-style-type: none;
+      margin: 2rem auto;
+      @include flexer(row, space-around, center);
+      &__item {
+        a {
+          text-decoration: none;
+          color: $paradiso;
+        }
+      }
+    }
+
+    .socials {
+      width: 15%;
+      list-style-type: none;
+      margin: 4rem auto 0 auto;
+      @include flexer(row, space-around, center);
+      font-size: 1.5rem;
+      li {
+        a {
+          color: $paradiso;
+        }
+      }
+    }
+  }
+}

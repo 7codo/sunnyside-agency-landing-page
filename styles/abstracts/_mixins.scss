@@ -1,0 +1,90 @@
+/*
+    * Usefull Mixin
+    * Reused Mixin
+    todo: prefix mixin, flex mixin
+
+*/
+
+/*
+    -webkit-box-shadow: 10px 10px 10px #fff
+*/
+
+/*
+    Generate Vendor Prefixe
+*/
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-'+ $prefix + '-' + $property}: $value;
+  }
+  #{$property}: $value;
+}
+
+/*
+    limit flex box mixin
+*/
+
+@mixin flexer($direction, $justify-c, $align-i) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-c;
+  align-items: $align-i;
+}
+
+/*
+  Grid system
+*/
+
+@mixin grider($nColumns, $min-row-height, $row-gap, $column-gap) {
+  display: grid;
+  grid-template-columns: repeat($nColumns, 1fr);
+  grid-auto-rows: minmax($min-row-height, auto);
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+}
+
+/*
+    Font face
+*/
+
+@mixin fontFace($family, $file-name, $weight, $format) {
+  @font-face {
+    font-family: $family;
+    font-weight: $weight;
+    font-display: optional;
+    src: url("../assets/fonts/" + $file-name) format($format);
+  }
+}
+
+/*
+  Background Image
+*/
+
+@mixin bg-image($isMobile, $image-name) {
+  background-image: if(
+    $isMobile,
+    url("../assets/images/mobile/" + $image-name),
+    url("../assets/images/desktop/" + $image-name)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*
+  Learn more anchor links
+*/
+
+@mixin learnmore-href($color) {
+  font-family: $font-family-frances;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $very-dark-desaturated-blue;
+  background-image: linear-gradient(120deg, $color 0%, $color 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+  &:hover {
+    background-size: 100% 88%;
+  }
+}

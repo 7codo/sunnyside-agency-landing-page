@@ -1,0 +1,400 @@
+@charset "UTF-8";
+/*Main Media Query Break Points*/
+/*Colors*/
+/*Primary*/
+/*Neutral*/
+/*Typography*/
+/*
+    * Usefull Mixin
+    * Reused Mixin
+    todo: prefix mixin, flex mixin
+
+*/
+/*
+    -webkit-box-shadow: 10px 10px 10px #fff
+*/
+/*
+    Generate Vendor Prefixe
+*/
+/*
+    limit flex box mixin
+*/
+/*
+  Grid system
+*/
+/*
+    Font face
+*/
+/*
+  Background Image
+*/
+/*
+  Learn more anchor links
+*/
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-display: optional;
+  src: url("../assets/fonts/Fraunces_72pt-Bold.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-display: optional;
+  src: url("../assets/fonts/Fraunces_72pt-Black.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Barlow";
+  font-weight: 600;
+  font-display: optional;
+  src: url("../assets/fonts/Barlow-SemiBold.ttf") format("ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  padding: 1.2rem 2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.header {
+  background-image: url("../assets/images/desktop/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header .navbar {
+  height: calc(10vh - 1.2rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header .navbar .listbar {
+  list-style-type: none;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header .navbar .listbar .contact {
+  background-color: white;
+  padding: 0.75rem 1.3rem;
+  border-radius: 25.99px;
+}
+
+.header .navbar .listbar .contact a {
+  color: #19536b;
+  font-weight: 900;
+}
+
+.header .navbar .listbar li {
+  padding: 0 1.5rem;
+}
+
+.header .navbar .listbar li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header .hero {
+  height: calc(90vh - 1.2rem);
+}
+
+.header .hero .hero__title {
+  padding-top: 7rem;
+  color: white;
+}
+
+.header .hero .tobottom_arrow {
+  padding-top: 8.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header .hero .tobottom_arrow .tailarrow {
+  display: block;
+  height: 8rem;
+  width: 0.3rem;
+  background-color: white;
+  position: relative;
+}
+
+.header .hero .tobottom_arrow .tailarrow i {
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  bottom: -1.5rem;
+  right: -50%;
+  transform: translateX(38%);
+}
+
+/*----End Header----*/
+/*----Start Skills Section----*/
+.skills .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(40rem, auto);
+  row-gap: 0;
+  column-gap: 0;
+}
+
+.skills .wrapper .boxshow {
+  position: relative;
+}
+
+.skills .wrapper .boxshow .bottom-transform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.skills .wrapper .boxshow .bottom-transform h3 {
+  font-size: 2.8rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+.skills .wrapper .boxshow .bottom-transform p {
+  font-family: "Barlow", sans-serif;
+  margin: 1.5rem 0;
+  color: #19536b;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+.skills .wrapper .transform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.skills .wrapper .transform h3 {
+  font-size: 3.25rem;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  color: #23303e;
+  text-align: left;
+  width: 100%;
+}
+
+.skills .wrapper .transform p {
+  font-family: "Barlow", sans-serif;
+  color: #23303e;
+  margin: 2rem 0;
+  color: #19536b;
+  line-height: 1.5rem;
+}
+
+.skills .wrapper .transform .learnmore_container {
+  width: 100%;
+}
+
+.skills .wrapper .transform .learnmore_container a.yellow {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #23303e;
+  background-image: linear-gradient(120deg, #fad400 0%, #fad400 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+
+.skills .wrapper .transform .learnmore_container a.yellow:hover {
+  background-size: 100% 88%;
+}
+
+.skills .wrapper .transform .learnmore_container a.blue {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #23303e;
+  background-image: linear-gradient(120deg, #a7abae 0%, #a7abae 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.2em;
+  background-position: 0 88%;
+  transition: background-size 0.25s ease-in;
+}
+
+.skills .wrapper .transform .learnmore_container a.blue:hover {
+  background-size: 100% 88%;
+}
+
+.skills .wrapper .bg-eggs {
+  background-image: url("../assets/images/desktop/image-transform.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skills .wrapper .bg-cup {
+  background-image: url("../assets/images/desktop/image-stand-out.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skills .wrapper .bg-cherris {
+  background-image: url("../assets/images/desktop/image-graphic-design.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skills .wrapper .bg-cherris .bottom-transform h3,
+.skills .wrapper .bg-cherris .bottom-transform p {
+  color: #23303e;
+}
+
+.skills .wrapper .bg-orange {
+  background-image: url("../assets/images/desktop/image-photography.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skills .wrapper .bg-orange .bottom-transform h3,
+.skills .wrapper .bg-orange .bottom-transform p {
+  color: #19536b;
+}
+
+/*----End Skills Section ----*/
+/*----Start Skills Section 🙋----*/
+.testimonials__container {
+  padding: 200px 100px;
+}
+
+.testimonials__container .testimonials__title {
+  font-size: 2.5rem;
+  color: #458c7e;
+}
+
+.testimonials__container .cards_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(0, auto);
+  row-gap: 0;
+  column-gap: 1rem;
+}
+
+.testimonials__container .cards_container .testimonials__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials__container .cards_container .testimonials__card .card__img {
+  width: 95px;
+  border-radius: 100%;
+  margin: 50px auto;
+}
+
+.testimonials__container .cards_container .testimonials__card .card__paragraph {
+  width: 65%;
+  text-align: center;
+}
+
+.testimonials__container .cards_container .testimonials__card .card__person {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.testimonials__container .cards_container .testimonials__card .card__person .person__name {
+  font-weight: bold;
+  margin-bottom: 0.6rem;
+}
+
+.testimonials__container .cards_container .testimonials__card .card__person .person__title {
+  color: #5a636c;
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+/*----End Skills Section 🙋----*/
+/*----Start Gallery Section 😎----*/
+.gallery__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(0, auto);
+  row-gap: 0;
+  column-gap: 0;
+}
+
+.gallery__container img {
+  width: 100%;
+}
+
+/*----End Gallery Section 😎----*/
+/*----Start Footer 🙋----*/
+.footer {
+  background-color: #90d4c5;
+  color: #2e7567;
+}
+
+.footer__container {
+  padding: 5rem;
+}
+
+.footer__container h2 {
+  text-transform: lowercase;
+  font-size: 3rem;
+}
+
+.footer__container .list {
+  width: 25%;
+  list-style-type: none;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer__container .list__item a {
+  text-decoration: none;
+  color: #2e7567;
+}
+
+.footer__container .socials {
+  width: 15%;
+  list-style-type: none;
+  margin: 4rem auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.footer__container .socials li a {
+  color: #2e7567;
+}

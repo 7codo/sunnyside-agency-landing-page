@@ -1,0 +1,23 @@
+@import "../abstracts/index";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: $font-family-barlow;
+  font-size: $font-size;
+}
+
+.container {
+  padding: 1.2rem 2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-family-frances;
+  font-weight: 900;
+}

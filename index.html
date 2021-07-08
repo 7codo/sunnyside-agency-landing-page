@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/font-awesome.min.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="import" href="component.html" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <img src="./assets/images/logo.svg" alt="Sunnyside" class="logo" />
+          <ul class="listbar">
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/project">Projects</a></li>
+            <li class="contact btn"><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hero">
+          <h2 class="hero__title">We are creatives</h2>
+          <div class="tobottom_arrow">
+            <div class="tailarrow">
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- End Header Start Skills Section  -->
+
+    <section class="skills">
+      <div class="wrapper">
+        <div class="boxshow transform">
+          <h3>Transform your brand</h3>
+          <p>
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <div class="learnmore_container">
+            <a href="" class="blue">learn more</a>
+          </div>
+        </div>
+        <div class="boxshow bg-eggs"></div>
+        <div class="boxshow bg-cup"></div>
+        <div class="boxshow transform">
+          <h3>Stand out to the right audience</h3>
+          <p>
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <div class="learnmore_container">
+            <a href="" class="yellow">learn more</a>
+          </div>
+        </div>
+        <div class="boxshow bg-cherris">
+          <div class="bottom-transform">
+            <h3>Graphic design</h3>
+            <p>
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </div>
+        <div class="boxshow bg-orange">
+          <div class="bottom-transform">
+            <h3>Photography</h3>
+            <p>
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Skills Section Start testimonials section  -->
+
+    <section class="testimonials">
+      <div class="testimonials__container">
+        <h2 class="testimonials__title">
+          <!-- __ mean child 😊  -->
+          Client testimonials
+        </h2>
+        <div class="cards_container">
+          <div class="testimonials__card">
+            <img
+              src="./assets/images/samuelCurtis.jpg"
+              alt="Samuel Testimonial"
+              class="card__img"
+            />
+            <p class="card__paragraph">
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <div class="card__person">
+              <h3 class="person__name">Samuel C.</h3>
+              <h4 class="person__title">Marketing Director</h4>
+            </div>
+          </div>
+
+          <div class="testimonials__card">
+            <img
+              src="./assets/images/image-thomas.jpg"
+              alt="Thomas Testimonial"
+              class="card__img"
+            />
+            <p class="card__paragraph">
+              We put our trust in Sunnyside and they delivered, making sure our
+              needs were met and deadlines were always hit.
+            </p>
+            <div class="card__person">
+              <h3 class="person__name">Thomas S.</h3>
+              <h4 class="person__title">Chief Operating Officer</h4>
+            </div>
+          </div>
+
+          <div class="testimonials__card">
+            <img
+              src="./assets/images/tomothyLee.jpg"
+              alt="tomothyLee Testimonial"
+              class="card__img"
+            />
+            <p class="card__paragraph">
+              Incredible end result! Our sales increased over 400% when we
+              worked with Sunnyside. Highly recommended!
+            </p>
+            <div class="card__person">
+              <h3 class="person__name">Tomothy L.</h3>
+              <h4 class="person__title">Business Owner</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End testimonials Section Start galery section  -->
+
+    <section class="gallery">
+      <div class="gallery__container">
+        <img
+          src="./assets/images/desktop/image-gallery-milkbottles.jpg"
+          alt="milkbottles"
+        />
+        <img
+          src="./assets/images/desktop/image-gallery-orange.jpg"
+          alt="orange"
+        />
+        <img src="./assets/images/desktop/image-gallery-cone.jpg" alt="cone" />
+        <img
+          src="./assets/images/desktop/image-gallery-sugarcubes.jpg"
+          alt="sugarcubes"
+        />
+      </div>
+    </section>
+
+    <!-- End Gallery Section 😃 Start Footer section  -->
+
+    <footer class="footer">
+      <div class="footer__container">
+        <h2>sunnyside</h2>
+        <ul class="list">
+          <li class="list__item"><a href="/about">About</a></li>
+          <li class="list__item"><a href="/services">Services</a></li>
+          <li class="list__item"><a href="/projects">Projects</a></li>
+        </ul>
+        <ul class="socials">
+          <li>
+            <a href="fb.com">
+              <i class="fa fa-facebook-official" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="twitter.com">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="instgram.com"
+              ><i class="fa fa-instagram" aria-hidden="true"></i
+            ></a>
+          </li>
+          <li>
+            <a href="pinterest.com"
+              ><i class="fa fa-pinterest" aria-hidden="true"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!--
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>

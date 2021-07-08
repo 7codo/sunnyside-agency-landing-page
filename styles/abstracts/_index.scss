@@ -1,0 +1,6 @@
+@import "./variables";
+@import "./mixins";
+
+@include fontFace("Fraunces", "Fraunces_72pt-Bold.ttf", 700, "ttf");
+@include fontFace("Fraunces", "Fraunces_72pt-Black.ttf", 900, "ttf");
+@include fontFace("Barlow", "Barlow-SemiBold.ttf", 600, "ttf");

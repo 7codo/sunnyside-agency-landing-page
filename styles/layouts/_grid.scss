@@ -4,30 +4,28 @@
   .navbar {
     //nav
     // background-color: #222;
-    height: calc(10vh - 1.2rem);
+
     @include flexer(row, flex-start, center);
     .logo {
       //image
     }
-    .listbar {
+    &__listbar {
       //ul
       list-style-type: none;
       flex: 1;
       // background: #000;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      @include flexer(row, flex-end, center);
       .contact {
         a {
           color: $dark-blue;
           font-weight: 900;
         }
         background-color: $white;
-        padding: 0.75rem 1.3rem;
+        padding: 0.75em 1.3em;
         @include prefixer(border-radius, 25.99px, webkit moz ms o);
       }
       li {
-        padding: 0 1.5rem;
+        padding: 0 1.5em;
 
         a {
           color: $white;
@@ -35,19 +33,22 @@
         }
       }
     }
+
+    &__mobile-menu {
+      display: none;
+    }
   }
 
   .hero {
     //div
     // background-color: #fe2;
-    height: calc(90vh - 1.2rem);
-
-    .hero__title {
+    min-height: 650px;
+    &__title {
       padding-top: 7rem;
       color: $white;
     }
     .tobottom_arrow {
-      padding-top: 8.5rem;
+      padding-top: 5.5em;
       display: flex;
       justify-content: center;
       .tailarrow {
@@ -83,7 +84,7 @@
         @include flexer(column, center, center);
         width: 50%;
         position: absolute;
-        bottom: 0;
+        bottom: 5%;
         left: 50%;
         @include prefixer(transform, translateX(-50%), webkit moz ms o);
         h3 {
@@ -94,9 +95,9 @@
         p {
           font-family: $font-family-barlow;
 
-          margin: 1.5rem 0;
+          margin: 1.5em 0;
           color: $dark-blue;
-          line-height: 1.5rem;
+          line-height: 1.5em;
           text-align: center;
         }
       }
@@ -166,21 +167,21 @@
 /*----Start Skills Section 🙋----*/
 
 .testimonials__container {
-  padding: 200px 100px;
+  padding: 9em 5em;
   .testimonials__title {
     font-size: 2.5rem;
     color: $dark-moderate-cyan;
   }
 
   .cards_container {
-    @include grider(3, 0, 0, 1rem);
+    @include grider(3, 0, 0, 1em);
     .testimonials__card {
       @include flexer(column, center, center);
 
       .card__img {
-        width: 95px;
+        width: 5.9375rem;
         @include prefixer(border-radius, 100%, webkit moz ms o);
-        margin: 50px auto;
+        margin: 3.125em auto;
       }
 
       .card__paragraph {
@@ -189,11 +190,11 @@
       }
 
       .card__person {
-        margin-top: 50px;
+        margin-top: 3.125em;
         text-align: center;
         .person__name {
           font-weight: bold;
-          margin-bottom: 0.6rem;
+          margin-bottom: 0.6em;
         }
         .person__title {
           color: $very-dark-grayish-blue;
@@ -224,7 +225,7 @@
   background-color: $monte-carlo;
   color: $paradiso;
   &__container {
-    padding: 5rem;
+    padding: 5em;
     h2 {
       text-transform: lowercase;
       font-size: 3rem;
@@ -232,7 +233,7 @@
     .list {
       width: 25%;
       list-style-type: none;
-      margin: 2rem auto;
+      margin: 2em auto;
       @include flexer(row, space-around, center);
       &__item {
         a {
@@ -245,13 +246,108 @@
     .socials {
       width: 15%;
       list-style-type: none;
-      margin: 4rem auto 0 auto;
+      margin: 4em auto 0 auto;
       @include flexer(row, space-around, center);
       font-size: 1.5rem;
       li {
         a {
           color: $paradiso;
         }
+      }
+    }
+  }
+}
+
+/*------Media Queries----------*/
+
+/*-----!Mobile First 🤫---------*/
+
+@include mobile {
+  /*-----Start NAVBAR------*/
+  .navbar {
+    &__listbar {
+      display: none !important;
+    }
+    &__mobile-menu {
+      width: 100%;
+      // @include flexer(row, flex-end, center);
+      display: flex !important;
+      justify-content: flex-end;
+      align-items: center;
+      color: $white;
+    }
+  }
+  /*-----Start HERO------*/
+  .hero {
+    &__title {
+      padding-top: 7rem;
+    }
+
+    .tobottom_arrow {
+      padding-top: 3em !important;
+    }
+  }
+
+  /*-----Start SKILLS------*/
+  .skills {
+    .wrapper {
+      @include grider(1, 40rem, 0, 0);
+      .transform {
+        width: 80%;
+        h3 {
+          font-size: 3rem;
+        }
+      }
+      .boxshow {
+        .bottom-transform {
+          @include flexer(column, center, center);
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  /*-----Start Testimonials------*/
+  .testimonials__container {
+    padding: 5em 2em;
+    .cards_container {
+      @include grider(1, 0, 0, 1em);
+      .card__paragraph {
+        width: 100% !important;
+      }
+      .card__img {
+        margin: 2.5em auto !important;
+      }
+
+      .card__person {
+        margin-top: 2.5em !important;
+      }
+    }
+
+    .testimonials__title {
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  /*-----Start Testimonials------*/
+  .gallery {
+    &__container {
+      @include grider(2, 0, 0, 0);
+    }
+  }
+
+  /*-----Start Footer------*/
+  .footer {
+    &__container {
+      .list {
+        width: 100%;
+        li {
+          padding: 0 1em;
+        }
+      }
+      .socials {
+        width: 100%;
       }
     }
   }

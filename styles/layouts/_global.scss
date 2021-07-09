@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  padding: 1.2rem 2rem;
+  padding: 1.2em 2em;
 }
 
 h2 {
@@ -20,4 +20,10 @@ h2 {
   text-transform: uppercase;
   font-family: $font-family-frances;
   font-weight: 900;
+}
+
+@include mobile {
+  h2 {
+    font-size: 3rem;
+  }
 }

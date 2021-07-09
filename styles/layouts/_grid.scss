@@ -264,6 +264,10 @@
 
 @include mobile {
   /*-----Start NAVBAR------*/
+  .header {
+    //header
+    @include bg-image(true, "image-header.jpg");
+  }
   .navbar {
     &__listbar {
       display: none !important;
@@ -280,11 +284,11 @@
   /*-----Start HERO------*/
   .hero {
     &__title {
-      padding-top: 7rem;
+      padding-top: 15em;
     }
 
     .tobottom_arrow {
-      padding-top: 3em !important;
+      padding-top: 6em !important;
     }
   }
 
@@ -303,6 +307,19 @@
           @include flexer(column, center, center);
           width: 80%;
         }
+      }
+
+      .bg-eggs {
+        @include bg-image(true, "image-transform.jpg");
+      }
+      .bg-cup {
+        @include bg-image(true, "image-stand-out.jpg");
+      }
+      .bg-cherris {
+        @include bg-image(true, "image-graphic-design.jpg");
+      }
+      .bg-orange {
+        @include bg-image(true, "image-photography.jpg");
       }
     }
   }
@@ -348,6 +365,102 @@
       }
       .socials {
         width: 100%;
+      }
+    }
+  }
+}
+
+/*-----!Tablet First 😗---------*/
+
+@include tablet {
+  /*-----Start NAVBAR------*/
+  .navbar {
+    &__listbar {
+      display: none !important;
+    }
+    &__mobile-menu {
+      width: 100%;
+      font-size: 1.5rem;
+      display: flex !important;
+      justify-content: flex-end;
+      align-items: center;
+      color: $white;
+    }
+  }
+  /*-----Start HERO------*/
+  .hero {
+    &__title {
+      padding-top: 7rem;
+    }
+
+    .tobottom_arrow {
+      padding-top: 3em !important;
+    }
+  }
+
+  /*-----Start SKILLS------*/
+  .skills {
+    .wrapper {
+      @include grider(1, 40rem, 0, 0);
+      .transform {
+        width: 80%;
+        h3 {
+          font-size: 3rem;
+        }
+      }
+      .boxshow {
+        .bottom-transform {
+          @include flexer(column, center, center);
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  /*-----Start Testimonials------*/
+  .testimonials__container {
+    padding: 5em 2em;
+    .cards_container {
+      @include grider(2, 0, 0, 1em);
+      .card__paragraph {
+        width: 100% !important;
+      }
+      .card__img {
+        margin: 2.5em auto !important;
+      }
+
+      .card__person {
+        margin-top: 2.5em !important;
+      }
+    }
+
+    .testimonials__title {
+      text-align: center;
+      font-size: 2.5rem;
+    }
+  }
+
+  /*-----Start Testimonials------*/
+  .gallery {
+    &__container {
+      @include grider(2, 0, 0, 0);
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  /*-----Start Footer------*/
+  .footer {
+    &__container {
+      .list {
+        width: 40%;
+        li {
+          padding: 0 1em;
+        }
+      }
+      .socials {
+        width: 40%;
       }
     }
   }

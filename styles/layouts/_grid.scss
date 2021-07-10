@@ -16,11 +16,7 @@
       // background: #000;
       @include flexer(row, flex-end, center);
       .contact {
-        a {
-          color: $dark-blue;
-          font-weight: 900;
-        }
-        @include contactbtn($white);
+        @include contactbtn($white, $monte-carlo);
       }
       li {
         padding: 0 1.5em;
@@ -65,13 +61,9 @@
           }
         }
         .contact {
-          a {
-            color: $dark-blue;
-            font-weight: 900;
-          }
           width: 25%;
+          @include contactbtn($yellow, $monte-carlo);
           margin: 0 auto;
-          @include contactbtn($yellow);
         }
       }
     }
@@ -274,6 +266,9 @@
       margin: 2em auto;
       @include flexer(row, space-around, center);
       &__item {
+        &:hover {
+          @include on-li-hover();
+        }
         a {
           text-decoration: none;
           color: $paradiso;
@@ -288,6 +283,9 @@
       @include flexer(row, space-around, center);
       font-size: 1.5rem;
       li {
+        &:hover {
+          @include on-li-hover();
+        }
         a {
           color: $paradiso;
         }
@@ -483,7 +481,7 @@
     &__container {
       .list {
         width: 40%;
-        li {
+        &__item {
           padding: 0 1em;
         }
       }

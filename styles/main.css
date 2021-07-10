@@ -34,6 +34,7 @@
 /*-----Media Queries-----*/
 /*---------Contact Button Style---------------*/
 /*------Mobile Menu Toggle Style-------*/
+/*------Hover && Transition--------*/
 @font-face {
   font-family: "Fraunces";
   font-weight: 700;
@@ -121,14 +122,25 @@ h2 {
 }
 
 .header .navbar__listbar .contact {
+  cursor: pointer;
   background-color: white;
   padding: 0.5em 1.3em;
   border-radius: 25.99px;
+  transition: background-color 5ms ease-in;
 }
 
 .header .navbar__listbar .contact a {
+  transition: color 5ms ease-in;
   color: #19536b;
   font-weight: 900;
+}
+
+.header .navbar__listbar .contact:hover {
+  background-color: #90d4c5;
+}
+
+.header .navbar__listbar .contact:hover a {
+  color: white;
 }
 
 .header .navbar__listbar li {
@@ -183,15 +195,26 @@ h2 {
 
 .header .navbar__mobile-menu .mobile-menu__list .contact {
   width: 25%;
-  margin: 0 auto;
+  cursor: pointer;
   background-color: #fad400;
   padding: 0.5em 1.3em;
   border-radius: 25.99px;
+  transition: background-color 5ms ease-in;
+  margin: 0 auto;
 }
 
 .header .navbar__mobile-menu .mobile-menu__list .contact a {
+  transition: color 5ms ease-in;
   color: #19536b;
   font-weight: 900;
+}
+
+.header .navbar__mobile-menu .mobile-menu__list .contact:hover {
+  background-color: #90d4c5;
+}
+
+.header .navbar__mobile-menu .mobile-menu__list .contact:hover a {
+  color: white;
 }
 
 .header .hero {
@@ -302,15 +325,15 @@ h2 {
   text-transform: uppercase;
   text-decoration: none;
   color: #23303e;
-  background-image: linear-gradient(120deg, #fad400 0%, #fad400 100%);
+  background-image: linear-gradient(120deg, rgba(250, 212, 0, 0.3) 0%, rgba(250, 212, 0, 0.3) 100%);
   background-repeat: no-repeat;
-  background-size: 100% 0.2em;
+  background-size: 100% 0.5em;
   background-position: 0 88%;
-  transition: background-size 0.25s ease-in;
+  transition: background-image 0.25s ease-in;
 }
 
 .skills .wrapper .transform .learnmore_container a.yellow:hover {
-  background-size: 100% 88%;
+  background-image: linear-gradient(120deg, #fad400 0%, #fad400 100%);
 }
 
 .skills .wrapper .transform .learnmore_container a.blue {
@@ -319,15 +342,15 @@ h2 {
   text-transform: uppercase;
   text-decoration: none;
   color: #23303e;
-  background-image: linear-gradient(120deg, #a7abae 0%, #a7abae 100%);
+  background-image: linear-gradient(120deg, rgba(167, 171, 174, 0.3) 0%, rgba(167, 171, 174, 0.3) 100%);
   background-repeat: no-repeat;
-  background-size: 100% 0.2em;
+  background-size: 100% 0.5em;
   background-position: 0 88%;
-  transition: background-size 0.25s ease-in;
+  transition: background-image 0.25s ease-in;
 }
 
 .skills .wrapper .transform .learnmore_container a.blue:hover {
-  background-size: 100% 88%;
+  background-image: linear-gradient(120deg, #a7abae 0%, #a7abae 100%);
 }
 
 .skills .wrapper .bg-eggs {
@@ -461,6 +484,14 @@ h2 {
   align-items: center;
 }
 
+.footer__container .list__item:hover a:hover {
+  transition: color 10ms ease-in;
+}
+
+.footer__container .list__item:hover a {
+  color: white;
+}
+
 .footer__container .list__item a {
   text-decoration: none;
   color: #2e7567;
@@ -475,6 +506,14 @@ h2 {
   justify-content: space-around;
   align-items: center;
   font-size: 1.5rem;
+}
+
+.footer__container .socials li:hover a:hover {
+  transition: color 10ms ease-in;
+}
+
+.footer__container .socials li:hover a {
+  color: white;
 }
 
 .footer__container .socials li a {
@@ -681,7 +720,7 @@ h2 {
   .footer__container .list {
     width: 40%;
   }
-  .footer__container .list li {
+  .footer__container .list__item {
     padding: 0 1em;
   }
   .footer__container .socials {

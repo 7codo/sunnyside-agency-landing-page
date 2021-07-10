@@ -103,3 +103,22 @@
     @content;
   }
 }
+
+/*---------Contact Button Style---------------*/
+@mixin contactbtn($bgcolor) {
+  background-color: $bgcolor;
+  padding: 0.5em 1.3em;
+  @include prefixer(border-radius, 25.99px, webkit moz ms o);
+}
+
+/*------Mobile Menu Toggle Style-------*/
+
+@mixin mm-toggle {
+  width: 100%;
+  font-size: 1.5rem;
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
+  color: $white;
+  cursor: pointer;
+}

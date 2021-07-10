@@ -20,9 +20,7 @@
           color: $dark-blue;
           font-weight: 900;
         }
-        background-color: $white;
-        padding: 0.75em 1.3em;
-        @include prefixer(border-radius, 25.99px, webkit moz ms o);
+        @include contactbtn($white);
       }
       li {
         padding: 0 1.5em;
@@ -33,9 +31,49 @@
         }
       }
     }
-
+    &__mobile-menu:hover .mobile-menu__list {
+      display: block;
+    }
+    &__mobile-menu::before {
+      content: "";
+      width: 5rem;
+      height: 3rem;
+      background-color: #fff;
+      position: absolute;
+      top: 3rem;
+      display: none;
+    }
     &__mobile-menu {
       display: none;
+      .mobile-menu__list {
+        display: none;
+        width: 90%;
+        z-index: 1;
+        position: absolute;
+        top: 4em;
+        left: 50%;
+        @include prefixer(transform, translateX(-50%), webkit moz ms o);
+        list-style-type: none;
+        background-color: #fff;
+        text-align: center;
+        padding: 1.5em 0;
+        li {
+          padding: 0.75em 0;
+          a {
+            text-decoration: none;
+            color: $very-dark-desaturated-blue;
+          }
+        }
+        .contact {
+          a {
+            color: $dark-blue;
+            font-weight: 900;
+          }
+          width: 25%;
+          margin: 0 auto;
+          @include contactbtn($yellow);
+        }
+      }
     }
   }
 
@@ -273,12 +311,7 @@
       display: none !important;
     }
     &__mobile-menu {
-      width: 100%;
-      // @include flexer(row, flex-end, center);
-      display: flex !important;
-      justify-content: flex-end;
-      align-items: center;
-      color: $white;
+      @include mm-toggle();
     }
   }
   /*-----Start HERO------*/
@@ -379,12 +412,7 @@
       display: none !important;
     }
     &__mobile-menu {
-      width: 100%;
-      font-size: 1.5rem;
-      display: flex !important;
-      justify-content: flex-end;
-      align-items: center;
-      color: $white;
+      @include mm-toggle();
     }
   }
   /*-----Start HERO------*/

@@ -1,4 +1,4 @@
-# Sunnyside agency landing page solution
+# Sunnyside agency landing page
 
 ## Users should be able to:
 

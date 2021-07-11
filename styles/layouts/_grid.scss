@@ -30,23 +30,26 @@
     &__mobile-menu:hover .mobile-menu__list {
       display: block;
     }
-    &__mobile-menu::before {
-      content: "";
-      width: 5rem;
-      height: 3rem;
-      background-color: #fff;
-      position: absolute;
-      top: 3rem;
-      display: none;
-    }
     &__mobile-menu {
       display: none;
       .mobile-menu__list {
+        &::before {
+          content: "";
+          width: 0;
+          height: 0;
+          // background-color: #eee;
+          position: absolute;
+          top: -65px;
+          right: 0;
+          // display: none;
+          border-bottom: 65px solid $white;
+          border-left: 65px solid transparent;
+        }
         display: none;
-        width: 90%;
+        width: 82.5%;
         z-index: 1;
         position: absolute;
-        top: 4em;
+        top: 4.5em;
         left: 50%;
         @include prefixer(transform, translateX(-50%), webkit moz ms o);
         list-style-type: none;

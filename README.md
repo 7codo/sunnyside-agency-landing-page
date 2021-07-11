@@ -5,7 +5,7 @@
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Show Preview](https://7codo.github.io/sunnyside-agency-landing-page/)
 
 ## My process
 

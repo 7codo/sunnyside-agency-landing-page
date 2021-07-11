@@ -90,7 +90,7 @@
   background-position: 0 88%;
   @include prefixer(
     transition,
-    background-image 0.25s ease-in,
+    background-image 65ms ease-out,
     webkit moz o ms
   );
   &:hover {
@@ -119,9 +119,13 @@
   background-color: $bgcolor;
   padding: 0.5em 1.3em;
   @include prefixer(border-radius, 25.99px, webkit moz ms o);
-  @include prefixer(transition, background-color 5ms ease-in, webkit moz ms o);
+  @include prefixer(
+    transition,
+    background-color 65ms ease-out,
+    webkit moz ms o
+  );
   a {
-    @include prefixer(transition, color 5ms ease-in, webkit moz ms o);
+    @include prefixer(transition, color 65ms ease-out, webkit moz ms o);
     color: $dark-blue;
     font-weight: 900;
   }
@@ -149,7 +153,7 @@
 
 @mixin on-li-hover {
   a:hover {
-    @include prefixer(transition, color 10ms ease-in, webkit moz ms o);
+    @include prefixer(transition, color 65ms ease-out, webkit moz ms o);
   }
   a {
     color: $white;

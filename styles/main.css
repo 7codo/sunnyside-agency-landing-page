@@ -126,11 +126,11 @@ h2 {
   background-color: white;
   padding: 0.5em 1.3em;
   border-radius: 25.99px;
-  transition: background-color 5ms ease-in;
+  transition: background-color 65ms ease-out;
 }
 
 .header .navbar__listbar .contact a {
-  transition: color 5ms ease-in;
+  transition: color 65ms ease-out;
   color: #19536b;
   font-weight: 900;
 }
@@ -199,12 +199,12 @@ h2 {
   background-color: #fad400;
   padding: 0.5em 1.3em;
   border-radius: 25.99px;
-  transition: background-color 5ms ease-in;
+  transition: background-color 65ms ease-out;
   margin: 0 auto;
 }
 
 .header .navbar__mobile-menu .mobile-menu__list .contact a {
-  transition: color 5ms ease-in;
+  transition: color 65ms ease-out;
   color: #19536b;
   font-weight: 900;
 }
@@ -329,7 +329,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: 100% 0.5em;
   background-position: 0 88%;
-  transition: background-image 0.25s ease-in;
+  transition: background-image 65ms ease-out;
 }
 
 .skills .wrapper .transform .learnmore_container a.yellow:hover {
@@ -346,7 +346,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: 100% 0.5em;
   background-position: 0 88%;
-  transition: background-image 0.25s ease-in;
+  transition: background-image 65ms ease-out;
 }
 
 .skills .wrapper .transform .learnmore_container a.blue:hover {
@@ -485,7 +485,7 @@ h2 {
 }
 
 .footer__container .list__item:hover a:hover {
-  transition: color 10ms ease-in;
+  transition: color 65ms ease-out;
 }
 
 .footer__container .list__item:hover a {
@@ -509,7 +509,7 @@ h2 {
 }
 
 .footer__container .socials li:hover a:hover {
-  transition: color 10ms ease-in;
+  transition: color 65ms ease-out;
 }
 
 .footer__container .socials li:hover a {

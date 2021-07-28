@@ -11,9 +11,5 @@
 
 ### Built with
 
-- Semantic HTML5 markup
-- SASS
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
+- React JS
+- Styled-Components
